@@ -1,0 +1,199 @@
+/* SI 539 Client Project */
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #131516;
+    background: white;
+    overflow-wrap: break-word;
+}
+
+header, main, footer {
+    padding: 0.5rem;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #00274C;
+    margin-bottom: 0.5rem;
+}
+
+strong, b, th {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p, ul, img {
+    margin-bottom: 0.625rem;
+}
+
+section, aside {
+    margin-bottom: 1.25rem;
+}
+
+main ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+}
+
+main li {
+    margin-bottom: 0.5rem;
+}
+
+img, iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: 40%;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+a {
+    color: #00274C;
+}
+
+a:focus {
+    outline: 3px solid #00274C;
+    outline-offset: 3px;
+}
+
+/* navigation */
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    height: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem;
+    border: 1px solid #989C97;
+}
+
+nav a[aria-current="page"] {
+    background: #00274C;
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* page sections */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.grid > h2, .grid > p, .grid > img {
+    grid-column: 1 / -1;
+}
+
+article {
+    min-width: 0;
+    padding: 0.5rem;
+    border: 1px solid #989C97;
+    margin-bottom: 0.75rem;
+}
+
+.grid article {
+    margin-bottom: 0;
+}
+
+aside {
+    border-top: 1px solid #989C97;
+    padding-top: 0.75rem;
+}
+
+/* resource table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #989C97;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background: #00274C;
+    color: white;
+    text-align: left;
+}
+
+/* footer */
+footer {
+    background: #00274C;
+    color: white;
+}
+
+footer a {
+    color: #FFCB05;
+}
+
+footer a:focus {
+    outline-color: #FFCB05;
+}
+
+/* skip link */
+.skip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-150%);
+    z-index: 1000;
+    padding: 0.75rem;
+    background: #00274C;
+    color: #FFCB05;
+}
+
+.skip:focus {
+    transform: translateY(0);
+    outline-color: #FFCB05;
+}
+
+/* reduced motion: shortens animations and transitions to almost nothing for
+   users who turned on "Reduce motion" in their device settings.
+   Copied from Eric Bailey, "Revisiting prefers-reduced-motion" (CSS-Tricks),
+   linked in SI 539 Week 6 lecture slides and Canvas "HTML, CSS, & JS Resources":
+   https://css-tricks.com/revisiting-prefers-reduced-motion/ */
+@media screen and
+  (prefers-reduced-motion: reduce),
+  (update: slow) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */
+    transition-duration: 0.001ms !important;
+  }
+}

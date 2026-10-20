@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.ico">
     <title>Engaged Learning Resources | UMSI</title>
-
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-  <a href = "#main">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+  <a class="skip" href = "#main">Skip to Main Content</a>
+        <img class="logo" src="images/umsi_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href = "index.html" aria-current="page">Home</a></li>
                 <li><a href = "before.html">Preparing for Your Experience</a></li>
                 <li><a href = "during.html">Navigate the Experience</a></li>
                 <li><a href = "after.html">Wrap Up and Move Forward</a></li>
@@ -23,32 +27,32 @@
     <h1>Welcome to the UMSI Engaged Learning Office</h1>
 
     </header>
-    <main id="main">
+    <main id="main" tabindex="-1">
     <section>
       <h2>Build Skills. Work with Partners. Have an Impact.</h2>
       <p>
        The UMSI Engaged Learning Office connects students with opportunities to apply classroom knowledge to real challenges. Use this site to prepare for your experience, manage your work, and reflect on what you learned.
       </p>
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/81ZO9RfIJEQ?si=tBp82YWZMl1u7CVS" title="Engaged Learning at UMSI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/81ZO9RfIJEQ?si=tBp82YWZMl1u7CVS" title="Engaged Learning at UMSI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          <!-- Note: this iframe might cause an Axe ARIA error - that's not on you that's on YouTube! -->
     </section>
 
 <section>
     <h2>Why Use This Resource?</h2>
 
-    <p>Real-world projects rarely follow a perfect plan. This site helps you find the right guidance when you need it, so you can spend less time earching for materials and more time learning, collaborating, and moving your project forward.
+    <p>Real-world projects rarely follow a perfect plan. This site helps you find the right guidance when you need it, so you can spend less time searching for materials and more time learning, collaborating, and moving your project forward.
     </p>
-        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
+        <img src="images/umsi_campusfall_umsibackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
     <ul>
-        <li><strong>Follow a clear process:</strong>Move from preparation and project launch through active work, reflection, and responsible closeout.</li>
+        <li><strong>Follow a clear process:</strong> Move from preparation and project launch through active work, reflection, and responsible closeout.</li>
         <li><strong>Find practical support:</strong> Access relevant templates, checklists, examples, and how-to guidance for common project needs.</li>
         <li><strong>Build professional skills:</strong> Strengthen your communication, teamwork, project management, and ethical decision-making.</li>
-        <li><strong>Turn experience into evidence:</strong> Identify what you learned and communicate your impact in resumes,portfolios, and interviews.</li>
+        <li><strong>Turn experience into evidence:</strong> Identify what you learned and communicate your impact in resumes, portfolios, and interviews.</li>
     </ul>
 </section>
 
- <section>
+ <section class="grid">
     <h2>Guidance for Every Stage</h2>
     <p>Engaged learning projects can change as new needs, constraints, and insights emerge. Find guidance for the stage of work you are navigating <strong>now.</strong></p>
     <article>
@@ -70,7 +74,7 @@
     </article>
   </section>
 
-   <section>
+   <section class="grid programs">
     <h2>Featured Programs</h2>
     <p>Explore opportunities to collaborate with organizations, communities, student teams, and partners in Michigan and beyond.</p>
     <article>
@@ -81,25 +85,25 @@
 
     <article>
     <h3><a href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=12556">A2 Data Dive</a></h3>
-    <img src="images/UMSI_DataDive_11092025_17.jpg" alt="A student holding up a laptop to show someone the screen.">
+    <img src="images/umsi_datadive_11092025_17.jpg" alt="A student holding up a laptop to show someone the screen.">
     <p>Use information and data skills to help address challenges identified by community organizations.</p>
     </article>
 
      <article>
       <h3><a href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=11297">Alternative Fall Break</a></h3>
-      <img src="images/UMSI_AFB_ArtsAndScraps_10.jpg" alt="Three people sorting craft supplies in a room full of buckets.">
+      <img src="images/umsi_afb_artsandscraps_10.jpg" alt="Three people sorting craft supplies in a room full of buckets.">
       <p>Participate in a community-engaged learning experience during the University’s fall break.</p>
     </article>
 
     <article>
       <h3><a href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=10621">Alternative Spring Break (ASB)</a></h3>
-      <img src="images/UMSI_ASB2026CIRCAPintig_52.jpg" alt="Five people jumping up in the air in front of a building.">
+      <img src="images/umsi_asb2026circapintig_52.jpg" alt="Five people jumping up in the air in front of a building.">
        <p>Collaborate with communities and nonprofit organizations on information-related projects during spring break.</p>
     </article>
 
     <article>
       <h3><a href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=12294">Student Organization Engaged Learning Leaders</a></h3>
-      <img src="images/UMSI_SOELLMatthaei_112823_04.jpg" alt="Four students posing together in a greenhouse.">
+      <img src="images/umsi_soellmatthaei_112823_04.jpg" alt="Four students posing together in a greenhouse.">
        <p>Develop leadership and project-management skills while supporting engaged learning through a UMSI student organization.</p>
     </article>
 
