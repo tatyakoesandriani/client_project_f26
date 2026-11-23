@@ -324,7 +324,7 @@ footer a:focus {
 /* media query for desktop and tablet */
 @media screen and (min-width: 768px) {
 
-    /* logo resize */
+    /* logo: resize */
     .logo {
         width: 400px;
         margin-left: auto;
@@ -338,6 +338,7 @@ footer a:focus {
     }
 
     /* main: max-width + center it */
+    header,
     main {
         max-width: 60rem;
         margin-left: auto;
@@ -350,7 +351,7 @@ footer a:focus {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* resources (last-child) span 2 cols */
+    /* resources (last-child): span 2 cols */
     .resources {
         grid-column: 1 / -1;
     }
@@ -360,7 +361,7 @@ footer a:focus {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* footer icon side to side with the info */
+    /* footer: icon side to side with the info */
     footer {
         grid-template-columns: auto 1fr;
         justify-items: left;
