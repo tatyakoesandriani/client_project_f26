@@ -1,6 +1,10 @@
 /* SI 539 Client Project */
 
 body {
+    /* to make the footer stays on the bottom of the screen when 404 content is short*/
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
@@ -49,9 +53,12 @@ img {
     margin-bottom: 0.625rem;
 }
 
-section,
 aside, address {
     margin-bottom: 1.25rem;
+}
+
+section {
+    margin-bottom: 2rem;
 }
 
 main ul {
@@ -168,6 +175,32 @@ aside {
     padding-top: 0.75rem;
 }
 
+/* button */
+/* button-style link
+   Written with help from Claude (Anthropic), Nov 2026 */
+.btn {
+    display: inline-block;
+    min-height: 2.75rem;
+    padding: 0.625rem 1.25rem;
+    border: 2px solid #00274C;
+    background: #00274C;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #FFCB05;
+    border-color: #FFCB05;
+    color: #00274C;
+}
+
+.cta { 
+    margin: 1rem 0 1.25rem;
+}
+
 /* resource table */
 table {
     width: 100%;
@@ -191,6 +224,35 @@ th {
     background: #00274C;
     color: white;
     text-align: left;
+}
+
+/* program filter */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.chip {
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: 0.5px solid #00274C;
+    border-radius: 4px;
+}
+
+.chip[aria-pressed="true"] {
+    background: #00274C;
+    color: white;
+    border: 0.5px solid #00274C;
+    border-radius: 4px;
+}
+
+.grid .is-hidden {
+    display: none;
 }
 
 /* footer */
@@ -236,6 +298,12 @@ footer a:focus {
 .skip:focus {
     transform: translateY(0);
     outline-color: #FFCB05;
+}
+
+/* 404 page */
+
+.error-page h1 {
+    font-size: 4rem;
 }
 
 /* reduced motion: shortens animations and transitions to almost nothing for
