@@ -40,7 +40,7 @@ live site: https://tatyakoesandriani.github.io/client_project_f26/
 - envelope icon: Heroicons (MIT) https://heroicons.com
 - reduced motion: Eric Bailey, CSS-Tricks https://css-tricks.com/revisiting-prefers-reduced-motion/
 - home page copy: UMGPT, stage page copy: ELO content doc
-- some css/js and 404 copy written with help from Claude (Anthropic)
+- some 404 copy written with help from Claude (Anthropic)
 
 ## deliverable 2: mobile notes
 - mobile styling for the 4 elo pages
@@ -51,13 +51,3 @@ live site: https://tatyakoesandriani.github.io/client_project_f26/
     - during.html: redundant link for "plan your next steps", kept on purpose because it gives users a next step at the end of the page
     - youtube video alert, needs a manual check that captions are synchronized
 
-## todo
-- [ ] delete duplicate images (uppercase / spaces in file names) and extra `style.css` + `html5reset.css` in the root
-- [ ] resize heavy images (`umsi_talking.png`, `umsi_viewbookphd2026_09.jpg`, `mcommons-...webp`)
-- [ ] same footer on every page, including 404 (year span on every page so the js doesn't error)
-- [ ] fix "copywright" typo + extra space inside the email link
-- [ ] 6 empty links in before.html, resource link in during.html table (check if still empty)
-- [ ] w3c html + css validator, wave, axe on all 5 pages from the github.io link, screenshots for the writeup
-- [ ] console check on every page, no errors
-- [ ] keyboard test: tab through nav, chips, buttons, skip link
-- [ ] check 768px and 1440px on the live site
