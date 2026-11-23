@@ -51,3 +51,4 @@ live site: https://tatyakoesandriani.github.io/client_project_f26/
 - wave warnings from mobile:
     - during.html: redundant link for "plan your next steps", kept on purpose because it gives users a next step at the end of the page
     - youtube video alert, needs a manual check that captions are synchronized
+

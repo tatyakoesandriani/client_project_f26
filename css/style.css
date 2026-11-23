@@ -53,7 +53,8 @@ img {
     margin-bottom: 0.625rem;
 }
 
-aside, address {
+aside,
+address {
     margin-bottom: 1.25rem;
 }
 
@@ -197,7 +198,7 @@ aside {
     color: #00274C;
 }
 
-.cta { 
+.cta {
     margin: 1rem 0 1.25rem;
 }
 
@@ -278,11 +279,12 @@ footer a:focus {
 }
 
 .icon {
-    width: 1rem; 
+    width: 1rem;
     height: 1rem;
     vertical-align: middle;
     margin-right: 0.25rem;
 }
+
 /* skip link */
 .skip {
     position: absolute;
@@ -356,8 +358,9 @@ footer a:focus {
         grid-column: 1 / -1;
     }
 
-    /* .programs: 3 columns */
-    .programs {
+    /* .programs and stages: 3 columns */
+    .programs,
+    .stages {
         grid-template-columns: repeat(3, 1fr);
     }
 
