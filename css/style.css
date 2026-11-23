@@ -9,11 +9,15 @@ body {
     overflow-wrap: break-word;
 }
 
-header, main, footer {
-    padding: 0.5rem;
+header,
+main,
+footer {
+    padding: 1rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 600;
     line-height: 1.3;
@@ -21,7 +25,9 @@ h1, h2, h3 {
     margin-bottom: 0.5rem;
 }
 
-strong, b, th {
+strong,
+b,
+th {
     font-weight: 700;
 }
 
@@ -37,11 +43,14 @@ h3 {
     font-size: 1.25rem;
 }
 
-p, ul, img {
+p,
+ul,
+img {
     margin-bottom: 0.625rem;
 }
 
-section, aside {
+section,
+aside, address {
     margin-bottom: 1.25rem;
 }
 
@@ -54,14 +63,17 @@ main li {
     margin-bottom: 0.5rem;
 }
 
-img, iframe {
+img,
+iframe {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
 .logo {
-    width: 40%;
+    width: 100%;
+    padding: 0.5rem 0;
+
 }
 
 iframe {
@@ -84,31 +96,59 @@ nav ul {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
     list-style: none;
+    padding: 0.5rem 0;
 }
 
 nav a {
     display: block;
+    background-color: #00274C;
+    color: white;
+    font-weight: 400;
     height: 100%;
     min-height: 2.75rem;
     padding: 0.5rem;
-    border: 1px solid #989C97;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+    text-decoration-skip-ink: none;
+    transition:
+        text-decoration-color 300ms ease,
+        font-weight 300ms ease;
 }
 
 nav a[aria-current="page"] {
-    background: #00274C;
-    color: white;
-    font-weight: 700;
+    background: #FFCB05;
+    color: #00274C;
+    font-weight: 600;
+}
+
+nav a:hover {
+    font-weight: 600;
     text-decoration: underline;
+    text-decoration-color: #FFCB05;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+    text-decoration-skip-ink: none;
 }
 
 /* page sections */
+
+.programs img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 0.5rem;
 }
 
-.grid > h2, .grid > p, .grid > img {
+.grid>h2,
+.grid>p,
+.grid>img {
     grid-column: 1 / -1;
 }
 
@@ -140,7 +180,8 @@ caption {
     margin-bottom: 0.5rem;
 }
 
-th, td {
+th,
+td {
     padding: 0.5rem;
     border: 1px solid #989C97;
     overflow-wrap: anywhere;
@@ -154,8 +195,12 @@ th {
 
 /* footer */
 footer {
+    display: grid;
     background: #00274C;
     color: white;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
 }
 
 footer a {
@@ -166,6 +211,16 @@ footer a:focus {
     outline-color: #FFCB05;
 }
 
+.footer-logo {
+    width: 120px;
+}
+
+.icon {
+    width: 1rem; 
+    height: 1rem;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}
 /* skip link */
 .skip {
     position: absolute;
@@ -188,12 +243,58 @@ footer a:focus {
    Copied from Eric Bailey, "Revisiting prefers-reduced-motion" (CSS-Tricks),
    linked in SI 539 Week 6 lecture slides and Canvas "HTML, CSS, & JS Resources":
    https://css-tricks.com/revisiting-prefers-reduced-motion/ */
-@media screen and
-  (prefers-reduced-motion: reduce),
-  (update: slow) {
-  * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important; /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */
-    transition-duration: 0.001ms !important;
-  }
+@media screen and (prefers-reduced-motion: reduce),
+(update: slow) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        /* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* media query for desktop and tablet */
+@media screen and (min-width: 768px) {
+
+    /* logo resize */
+    .logo {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* nav ul: 4 columns instead of 2 */
+    nav ul {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    /* main: max-width + center it */
+    main {
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* .grid: 3 columns */
+    .grid {
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* resources (last-child) span 2 cols */
+    .resources {
+        grid-column: 1 / -1;
+    }
+
+    /* .programs: 3 columns */
+    .programs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* footer icon side to side with the info */
+    footer {
+        grid-template-columns: auto 1fr;
+        justify-items: left;
+    }
 }
